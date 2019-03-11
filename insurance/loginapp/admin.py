@@ -1,5 +1,5 @@
 from django.contrib import admin
-from loginapp.models import Login_details
+from loginapp.models import User_insurance
 # Register your models here.
 
-admin.site.register(Login_details)
+admin.site.register(User_insurance)

@@ -7,14 +7,16 @@
 
   </head>
   <body>
-    <h1>Login Details</h1>
     <div class="container">
-      <form class="" method="post">
-        {{ form.as_p }}
-        {% csrf_token %}
-        <input type="submit" class = "btn btn-primary" name="" value="Login">
+      <div class="jumbotron">
+        <h1>Please Enter Your Login Details</h1>
+      </div>
+        <form class="" method="post">
+          {{ form.as_p }}
+          {% csrf_token %}
+          <input type="submit" class = "btn btn-primary" name="" value="Login">
 
-      </form>
+        </form>
 
     </div>
 
