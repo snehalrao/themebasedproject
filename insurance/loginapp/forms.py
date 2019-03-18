@@ -1,16 +1,7 @@
 from django import forms
-from loginapp.models import User_insurance
+from loginapp.models import Login_details
 
-class Insuranceform(forms.ModelForm):
+class Insurance_form(forms.ModelForm):
     class Meta:
-        # model is a keyword
-        # or else it will throw value error
-
-        model = User_insurance
-        fields = '__all__'
-        #for labels
-
-        labels = {
-            'usr_id' : 'Username',
-            'usr_pass' : 'Password'
-        }
+        model = Login_details
+        fields = "__all__"

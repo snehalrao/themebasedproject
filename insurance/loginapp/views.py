@@ -1,24 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
-from loginapp.forms import Insuranceform
+from loginapp import forms
 
 # Create your views here.
 
 def login(request):
-    form = Insuranceform()
-
-    if request.method == "POST" :
-        form = Insuranceform(request.POST)
-
-        if form.is_valid():
-            form.save(commit = True)
-            return login_second(request) #changing Password
-        else:
-            print("ERROR FORM")
-
-    return render(request, 'loginapp/login_page.html',{'form' :form})
-
-
-def login_second(request):
-    return HttpResponse("<h1> Coming soon </h1>")
+    # form = forms.Insurance_form()
+    return render(request, 'loginapp/index.html')
